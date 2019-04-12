@@ -1,9 +1,9 @@
-export function calculateBonus(sales, bonusPercent) {
+export function calculateBonus(sales, bonusPercent, minSaleForBonus) {
     let total = 0;
 
     for (const sale of sales) {
-        if (sale > 10000){
-            const sum = sale - 10000;
+        if (sale > minSaleForBonus){
+            const sum = sale - minSaleForBonus;
             const bonus = sum * bonusPercent;
             total += bonus;
         }
